@@ -3,9 +3,9 @@
 use M2i\Mvc\App;
 
 require __DIR__.'/../vendor/autoload.php';
-
 // Dossier du projet à changer peut être...
 define('BASE_URL', '/php-oo-main/13-tp/public');
+session_start();
 
 $app = new App();
 $app->setBasePath(BASE_URL);
@@ -20,6 +20,9 @@ $app->addRoutes([
     ['GET|POST', '/book/[:id]/edit', 'BookController@edit'],
     ['GET|POST', '/book/[:id]/delete', 'BookController@delete'],
     ['GET|POST', '/search', 'SearchController@search'],
+    ['GET', '/cart/[:id]/add', 'CartController@add'],
+    ['GET', '/cart/show', 'CartController@show'],
+    ['GET', '/cart/[:id]/delete', 'CartController@delete'],
 ]);
 
 $app->run();

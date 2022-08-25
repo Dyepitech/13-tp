@@ -15,5 +15,5 @@ vendor/bin/phinx migrate
 Pour les routes, vérifier le chemin dans le fichier `index.php` :
 
 ```php
-define('BASE_URL', '/php-oo/13-tp/public');
+define('BASE_URL', '/php-oo/12-mvc/public');
 ```
